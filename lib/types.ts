@@ -1,0 +1,9 @@
+export type TimerState = "IDLE" | "RUNNING" | "PAUSED" | "COMPLETED";
+export type Quest = { id: string; label: string; xp: number; completed: boolean };
+export type SkillNode = { id: string; title: string; subject: string; prerequisiteId?: string; completed: boolean; quizScore?: number; x: number; y: number };
+export type Flashcard = { id: string; front: string; back: string };
+export type QuizQuestion = { question: string; options: string[]; correct_index: number; explanation: string };
+export type PresentationSlide = { slide_title: string; bullet_points: string[] };
+export type Summary = { title: string; shorten_level: "brief" | "standard" | "deep"; key_points: string[] };
+export type AlchemyResult = { summaries: Summary[]; flashcards: Flashcard[]; quizzes: QuizQuestion[]; presentations: PresentationSlide[] };
+export type LeaderboardUser = { id: string; handle: string; total_xp: number; current_streak: number; rank: number };
